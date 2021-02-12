@@ -1,0 +1,29 @@
+{
+  "players": {
+    "2aa2a9d3-beb0-4169-b8c5-6931afc379ea": {
+      "max_mmr": 3205.0,
+      "skill_mean": 31.4576335374,
+      "deaths": 755,
+      "profile_id": "2aa2a9d3-beb0-4169-b8c5-6931afc379ea",
+      "next_rank_mmr": 3200.0,
+      "rank": 18,
+      "max_rank": 19,
+      "board_id": "pvp_ranked",
+      "skill_stdev": 3.998797328,
+      "kills": 1031,
+      "last_match_skill_stdev_change": -0.0107097165,
+      "update_time": "2021-02-08T23:40:46.585000+00:00",
+      "last_match_mmr_change": -30.0,
+      "abandons": 1,
+      "season": 20,
+      "top_rank_position": 0,
+      "last_match_skill_mean_change": -0.3028977565,
+      "mmr": 3146.0,
+      "previous_rank_mmr": 3000.0,
+      "last_match_result": 2,
+      "wins": 97,
+      "region": "ncsa",
+      "losses": 93
+    }
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "profileId": "2aa2a9d3-beb0-4169-b8c5-6931afc379ea",
+  "startDate": 20150101,
+  "endDate": 20210208,
+  "region": "all",
+  "statType": "summary",
+  "platforms": {
+    "PC": {
+      "gameModes": {
+        "all": {
+          "type": "Team roles",
+          "teamRoles": {
+            "all": [
+              {
+                "type": "Generalized",
+                "statsType": "summary",
+                "statsDetail": "summary",
+                "matchesPlayed": 449,
+                "roundsPlayed": 2706,
+                "minutesPlayed": 11912,
+                "matchesWon": 225,
+                "matchesLost": 224,
+                "roundsWon": 1361,
+                "roundsLost": 1345,
+                "kills": 2421,
+                "assists": 645,
+                "death": 1855,
+                "headshots": 1423,
+                "meleeKills": 6,
+                "teamKills": 15,
+                "openingKills": 331,
+                "openingDeaths": 201,
+                "trades": 127,
+                "openingKillTrades": 14,
+                "openingDeathTrades": 9,
+                "revives": 1314,
+                "distanceTravelled": 501766,
+                "winLossRatio": 1.0045,
+                "killDeathRatio": { "value": 1.3051, "p": 0.0 },
+                "headshotAccuracy": { "value": 0.5878, "p": 0.0 },
+                "killsPerRound": { "value": 0.8947, "p": 0.0 },
+                "roundsWithAKill": { "value": 0.544, "p": 0.0 },
+                "roundsWithMultiKill": { "value": 0.2487, "p": 0.0 },
+                "roundsWithOpeningKill": { "value": 0.1223, "p": 0.0 },
+                "roundsWithOpeningDeath": { "value": 0.0743, "p": 0.0 },
+                "roundsWithKOST": { "value": 0.6323, "p": 0.0 },
+                "roundsSurvived": { "value": 0.3145, "p": 0.0 },
+                "roundsWithAnAce": { "value": 0.0015, "p": 0.0 },
+                "roundsWithClutch": { "value": 0.0129, "p": 0.0 },
+                "timeAlivePerMatch": 655.4232,
+                "timeDeadPerMatch": 185.7506,
+                "distancePerRound": 185.4272
+              }
+            ]
+          }
+        },
+        "casual": {
+          "type": "Team roles",
+          "teamRoles": {
+            "all": [
+              {
+                "type": "Generalized",
+                "statsType": "summary",
+                "statsDetail": "summary",
+                "matchesPlayed": 4,
+                "roundsPlayed": 13,
+                "minutesPlayed": 55,
+                "matchesWon": 3,
+                "matchesLost": 1,
+                "roundsWon": 9,
+                "roundsLost": 4,
+                "kills": 9,
+                "assists": 4,
+                "death": 8,
+                "headshots": 6,
+                "meleeKills": 0,
+                "teamKills": 0,
+                "openingKills": 1,
+                "openingDeaths": 1,
+                "trades": 2,
+                "openingKillTrades": 0,
+                "openingDeathTrades": 0,
+                "revives": 1,
+                "distanceTravelled": 2572,
+                "winLossRatio": 3.0,
+                "killDeathRatio": { "value": 1.125, "p": 0.0 },
+                "headshotAccuracy": { "value": 0.6667, "p": 0.0 },
+                "killsPerRound": { "value": 0.6923, "p": 0.0 },
+                "roundsWithAKill": { "value": 0.5385, "p": 0.0 },
+                "roundsWithMultiKill": { "value": 0.1538, "p": 0.0 },
+                "roundsWithOpeningKill": { "value": 0.0769, "p": 0.0 },
+                "roundsWithOpeningDeath": { "value": 0.0769, "p": 0.0 },
+                "roundsWithKOST": { "value": 0.6923, "p": 0.0 },
+                "roundsSurvived": { "value": 0.3846, "p": 0.0 },
+                "roundsWithAnAce": { "value": 0.0, "p": 0.0 },
+                "roundsWithClutch": { "value": 0.0, "p": 0.0 },
+                "timeAlivePerMatch": 292.75,
+                "timeDeadPerMatch": 81.5,
+                "distancePerRound": 197.8462
+              }
+            ]
+          }
+        },
+        "ranked": {
+          "type": "Team roles",
+          "teamRoles": {
+            "all": [
+              {
+                "type": "Generalized",
+                "statsType": "summary",
+                "statsDetail": "summary",
+                "matchesPlayed": 366,
+                "roundsPlayed": 2242,
+                "minutesPlayed": 9955,
+                "matchesWon": 184,
+                "matchesLost": 182,
+                "roundsWon": 1130,
+                "roundsLost": 1112,
+                "kills": 1992,
+                "assists": 545,
+                "death": 1534,
+                "headshots": 1165,
+                "meleeKills": 4,
+                "teamKills": 7,
+                "openingKills": 270,
+                "openingDeaths": 155,
+                "trades": 106,
+                "openingKillTrades": 11,
+                "openingDeathTrades": 5,
+                "revives": 1105,
+                "distanceTravelled": 420993,
+                "winLossRatio": 1.011,
+                "killDeathRatio": { "value": 1.2986, "p": 0.0 },
+                "headshotAccuracy": { "value": 0.5848, "p": 0.0 },
+                "killsPerRound": { "value": 0.8885, "p": 0.0 },
+                "roundsWithAKill": { "value": 0.5455, "p": 0.0 },
+                "roundsWithMultiKill": { "value": 0.2475, "p": 0.0 },
+                "roundsWithOpeningKill": { "value": 0.1204, "p": 0.0 },
+                "roundsWithOpeningDeath": { "value": 0.0691, "p": 0.0 },
+                "roundsWithKOST": { "value": 0.6338, "p": 0.0 },
+                "roundsSurvived": { "value": 0.3158, "p": 0.0 },
+                "roundsWithAnAce": { "value": 0.0009, "p": 0.0 },
+                "roundsWithClutch": { "value": 0.0125, "p": 0.0 },
+                "timeAlivePerMatch": 685.6339,
+                "timeDeadPerMatch": 184.0191,
+                "distancePerRound": 187.7756
+              }
+            ]
+          }
+        },
+        "unranked": {
+          "type": "Team roles",
+          "teamRoles": {
+            "all": [
+              {
+                "type": "Generalized",
+                "statsType": "summary",
+                "statsDetail": "summary",
+                "matchesPlayed": 79,
+                "roundsPlayed": 451,
+                "minutesPlayed": 1901,
+                "matchesWon": 38,
+                "matchesLost": 41,
+                "roundsWon": 222,
+                "roundsLost": 229,
+                "kills": 420,
+                "assists": 96,
+                "death": 313,
+                "headshots": 252,
+                "meleeKills": 2,
+                "teamKills": 8,
+                "openingKills": 60,
+                "openingDeaths": 45,
+                "trades": 19,
+                "openingKillTrades": 3,
+                "openingDeathTrades": 4,
+                "revives": 208,
+                "distanceTravelled": 78201,
+                "winLossRatio": 0.9268,
+                "killDeathRatio": { "value": 1.3419, "p": 0.0 },
+                "headshotAccuracy": { "value": 0.6, "p": 0.0 },
+                "killsPerRound": { "value": 0.9313, "p": 0.0 },
+                "roundsWithAKill": { "value": 0.5366, "p": 0.0 },
+                "roundsWithMultiKill": { "value": 0.2572, "p": 0.0 },
+                "roundsWithOpeningKill": { "value": 0.133, "p": 0.0 },
+                "roundsWithOpeningDeath": { "value": 0.0998, "p": 0.0 },
+                "roundsWithKOST": { "value": 0.6231, "p": 0.0 },
+                "roundsSurvived": { "value": 0.306, "p": 0.0 },
+                "roundsWithAnAce": { "value": 0.0044, "p": 0.0 },
+                "roundsWithClutch": { "value": 0.0155, "p": 0.0 },
+                "timeAlivePerMatch": 533.8228,
+                "timeDeadPerMatch": 199.0506,
+                "distancePerRound": 173.3947
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
