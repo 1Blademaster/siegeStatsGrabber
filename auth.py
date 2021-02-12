@@ -1,6 +1,7 @@
 import asyncio
 import base64
 import json
+import os
 from datetime import datetime, timedelta
 
 import aiohttp
@@ -29,12 +30,15 @@ class Auth:
 		self.ownUserId = respData['userId']
 
 	def getUserId(self, username):
-		with open('cachedNames.txt', 'r') as f:
-			for line in f.readlines():
-				_line = line.split(' : ')
-				if _line[0] == username:
-					return _line[1].strip()
-				
+		if os.path.isfile('cachedNames.txt'):
+			with open('cachedNames.txt', 'r') as f:
+				for line in f.readlines():
+					_line = line.split(' : ')
+					if _line[0] == username:
+						return _line[1].strip()
+		else:
+			open('cachedNames.txt', 'w').close()
+
 		headers = {
 			'Content-Type': 'application/json',
 			'Authorization': 'Ubi_v1 t=' + self.ticket,
@@ -48,7 +52,7 @@ class Auth:
 			userId = r.json()['profiles'][0]['userId']
 
 			with open('cachedNames.txt', 'a') as f:
-				f.write(f'{username} : {userId}\n')
+				f.write(f'{username.strip()} : {userId}\n')
 
 		except:
 			print(f'Could not find the user ID for: {username}')

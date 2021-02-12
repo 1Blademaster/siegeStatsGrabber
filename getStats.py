@@ -5,6 +5,7 @@ import time
 
 from datetime import datetime
 
+import aiohttp
 import numpy as np
 import pyautogui
 from colorama import Fore, Style, init
@@ -177,7 +178,7 @@ async def printPlayerStats(a, username):
 	updateTime = rankData['update_time']
 	# "update_time": "2021-02-08T23:40:46.585000+00:00",
 	updateTime = updateTime[:len(updateTime) - 13]
-	updateTime = datetime.strptime(updateTime, '%Y-%m-%dT%H:%M:%S')
+	updateTime = datetime.strptime(updateTime, '%Y-%m-%dT%H:%M:%S') if updateTime != '1970-01-01T0' else 'None'
 
 	attackOpData = operatorData['platforms']['PC']['gameModes']['all']['teamRoles']['attacker']
 	defenceOpData = operatorData['platforms']['PC']['gameModes']['all']['teamRoles']['defender']
@@ -221,7 +222,7 @@ async def printPlayerStats(a, username):
 	tableRows.append(['General DEF MAIN', f'{defOp["statsDetail"]} : {getPosNegNumber(round(defOp["killDeathRatio"]["value"], 2))}'])
 	
 	print(tabulate(tableRows, tablefmt="psql"))
-	print(f'Last updated: {updateTime.strftime("%b %d %H:%M:%S")}')
+	print(f'Last updated: {updateTime.strftime("%b %d %H:%M:%S")}' if updateTime != 'None' else 'Last updated: Unknown')
 
 def showLeaderboard():
 	print('Return to siege and press TAB in 3 seconds')
@@ -252,12 +253,15 @@ async def run():
 			else:
 				usernames = usernames.split(',')
 				for username in usernames:
-					if username.strip():
+					username = username.strip()
+					if username:
 						startTime = time.perf_counter()
 
 						await printPlayerStats(a, username)
 
 						print('Done in {:.9f}s'.format(float(time.perf_counter() - startTime)))
+	except aiohttp.client_exceptions.ServerDisconnectedError:
+		print('\n An error occured while connected to the UBISOFT API, please re-run the script to try and reconnect.')
 	except KeyboardInterrupt:
 		print('\nQuitting.')
 		exit()
