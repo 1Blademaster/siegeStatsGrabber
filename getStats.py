@@ -252,6 +252,7 @@ def checkUsername(username):
 async def run():
 	try:
 		a = Auth(os.environ['email'], os.environ['email_password'])
+		
 		while True:
 			usernames = input('\nEnter a username to search: ')
 			if usernames == '':
