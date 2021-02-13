@@ -50,7 +50,7 @@ You will need:
 4. Now you need to add your ubisoft account email address and password, there are two ways of doing this:
 [+] You can either set your email and password as enviromental variables under `email` and `email_password` respectively
 [+] Or you can edit the Auth arguments to your email and password inside the run function, ln 254
-5. Now you can simply call the script using `python getStats.py`
+5. Now you can simply call the script using `python getStats.py` OR executing `run.bat`
 
 
 ------------
