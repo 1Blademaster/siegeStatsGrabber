@@ -6,6 +6,7 @@ from datetime import datetime, timedelta
 
 import aiohttp
 import requests
+from colorama import Fore, Style
 
 
 class Auth:
@@ -55,7 +56,7 @@ class Auth:
 				f.write(f'{username.strip()} : {userId}\n')
 
 		except:
-			print(f'Could not find the user ID for: {username}')
+			print(f'{Fore.RED}[Error]{Style.RESET_ALL} Could not find the user ID for: {username}')
 			userId = None
 
 		return userId
@@ -83,7 +84,7 @@ class Auth:
 				f'https://r6s-stats.ubisoft.com/v1/current/maps/{userId}?gameMode=all,ranked,unranked,casual&platform=PC&startDate=20151210&endDate={datetime.now().strftime("%Y%m%d")}'
 			]
 		else:
-			print('Unknown stat type')
+			print('{Fore.RED}[Error]{Style.RESET_ALL} Unknown stat type')
 			return False
 
 	async def fetchData(self, link):
@@ -103,7 +104,7 @@ class Auth:
 					if r.status == 200:
 						return await r.json()
 					else:
-						print('An error occured: ')
+						print(f'{Fore.RED}[Error]{Style.RESET_ALL} An error occured: ')
 						print(r.reason)
 						return False
 		else:

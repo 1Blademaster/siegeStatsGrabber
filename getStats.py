@@ -81,7 +81,7 @@ def getRank(mmr, colour=True):
 		elif 'COPPER' in rank:
 			rank = f'{Fore.RED}{Style.DIM}{rank}{Style.RESET_ALL}'
 
-	return rank
+	return rank 
 
 def getPosNegNumber(number):
 	if number > 1:
@@ -122,55 +122,55 @@ async def printPlayerStats(a, username):
 
 	seasonalLink = a.getLink('seasonal', username)
 	if not seasonalLink:
-		print(f'An error occured while fetching the seasonal link for {username}')
+		print(f'{Fore.RED}[Error]{Style.RESET_ALL} An error occured while fetching the seasonal link for {username}')
 		return
 	seasonalData = await a.fetchData(seasonalLink)
 	if not seasonalData:
-		print(f'An error occured while fetching the seasonal data for {username}')
+		print(f'{Fore.RED}[Error]{Style.RESET_ALL} An error occured while fetching the seasonal data for {username}')
 		return
 	
 	# Rank
 
 	rankLink = a.getLink('rank', username)
 	if not rankLink:
-		print(f'An error occured while fetching the rank link for {username}')
+		print(f'{Fore.RED}[Error]{Style.RESET_ALL} An error occured while fetching the rank link for {username}')
 		return
 	rankData = await a.fetchData(rankLink)
 	if not rankData:
-		print(f'An error occured while fetching the rank data for {username}')
+		print(f'{Fore.RED}[Error]{Style.RESET_ALL} An error occured while fetching the rank data for {username}')
 		return
 		
 	# Summary
 
 	# summaryLink = a.getLink('summary', username)
 	# if not summaryLink:
-	# 	print(f'An error occured while fetching the summary link for {username}')
+	# 	print(f'{Fore.RED}[Error]{Style.RESET_ALL} An error occured while fetching the summary link for {username}')
 	# 	return
 	# summaryData = a.fetchData(summaryLink)
 	# if not summaryData:
-	# 	print(f'An error occured while fetching the summary data for {username}')
+	# 	print(f'{Fore.RED}[Error]{Style.RESET_ALL} An error occured while fetching the summary data for {username}')
 	# 	return
 
 	# Operator
 
 	operatorLink = a.getLink('operator', username)
 	if not operatorLink:
-		print(f'An error occured while fetching the operator link for {username}')
+		print(f'{Fore.RED}[Error]{Style.RESET_ALL} An error occured while fetching the operator link for {username}')
 		return
 	operatorData = await a.fetchData(operatorLink)
 	if not operatorData:
-		print(f'An error occured while fetching the operator data for {username}')
+		print(f'{Fore.RED}[Error]{Style.RESET_ALL} An error occured while fetching the operator data for {username}')
 		return
 
 	# Map
 
 	mapLink = a.getLink('map', username)
 	if not mapLink:
-		print(f'An error occured while fetching the map link for {username}')
+		print(f'{Fore.RED}[Error]{Style.RESET_ALL} An error occured while fetching the map link for {username}')
 		return
 	mapData = await a.fetchData(mapLink)
 	if not mapData:
-		print(f'An error occured while fetching the map data for {username}')
+		print(f'{Fore.RED}[Error]{Style.RESET_ALL} An error occured while fetching the map data for {username}')
 		return
 
 	rankData = rankData['players'][list(rankData['players'].keys())[0]]
@@ -238,6 +238,17 @@ def showLeaderboard():
 	croppedImgObject = Image.fromarray(croppedImg)
 	croppedImgObject.show()
 
+def checkUsername(username):
+	nonStartingChar = '123456789_-.'
+	if username.strip() and username[0] not in nonStartingChar and 2 < len(username) < 16:
+		alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-.'
+		for letter in username:
+			if letter not in alphabet:
+				return False
+		return True
+	else: 
+		return False
+
 async def run():
 	try:
 		a = Auth(os.environ['email'], os.environ['email_password'])
@@ -248,20 +259,18 @@ async def run():
 				break
 			elif usernames == 't':
 				showLeaderboard()
-			elif usernames == 's':
-				a.test()
 			else:
 				usernames = usernames.split(',')
 				for username in usernames:
 					username = username.strip()
-					if username:
+					if checkUsername(username):
 						startTime = time.perf_counter()
 
 						await printPlayerStats(a, username)
 
 						print('Done in {:.9f}s'.format(float(time.perf_counter() - startTime)))
 	except aiohttp.client_exceptions.ServerDisconnectedError:
-		print('\n An error occured while connected to the UBISOFT API, please re-run the script to try and reconnect.')
+		print('\n {Fore.RED}[Error]{Style.RESET_ALL} An error occured while connected to the UBISOFT API, please re-run the script to try and reconnect.')
 	except KeyboardInterrupt:
 		print('\nQuitting.')
 		exit()
