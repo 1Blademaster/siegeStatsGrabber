@@ -1,4 +1,7 @@
 # siegeStatsGrabber
+
+Note: This only checks stats for players who play on PC, if you want me to add console support then let me know!
+
 ### What is this?
 This is a small little script which fetches data from the Ubisoft API and prints certain statistics about a player to the terminal window.
 
