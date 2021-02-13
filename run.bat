@@ -1,0 +1,2 @@
+python getStats.py
+pause
